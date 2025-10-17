@@ -17,7 +17,7 @@ on:
         default: refs/heads/dev
 env:
   APP: sumo
-  APPLICATION_REPOSITORY: mozilla/kitsune
+  APPLICATION_REPOSITORY: fkiriakos07/kitsune
   IMAGE_NAME: kitsune
   GAR_LOCATION: us
   GCP_PROJECT_ID: moz-fx-sumo-prod
@@ -30,7 +30,7 @@ jobs:
       deployments: write
       id-token: write
     runs-on: ubuntu-latest
-    if: github.repository == 'mozilla/kitsune'
+    if: github.repository == 'fkiriakos07/kitsune'
 
     outputs:
       deployment_env: ${{ env.DEPLOYMENT_ENV }}
